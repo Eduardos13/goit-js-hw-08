@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+img {
+    display: block;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 24px 156px;
+    padding-left: 0;
+    width: calc(360px * 3 + 24px *2) ;
+}
+
+.gallery-item {
+    width: 360px;
+    height: 200px;
+}
+
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+}
