@@ -91,5 +91,19 @@ function handleClick(event) {
 
   event.preventDefault();
 
-  console.log(event.target.dataset.source); // виводимо в консоль посилання на велике зображення
+  //console.log(event.target.dataset.source); // виводимо в консоль посилання на велике зображення
+
+  if(event.target.nodeName !== "IMG") { // забороняємо реакцію на кліки між картинками
+    return;
+  }
+
+  // реалізовуємо відкривання картинки в модальному вікні
+  const instance = basicLightbox.create(` 
+    <div class="modal">
+      <img src="${event.target.dataset.source}" alt="${event.target.description}"> 
+    </div>
+`)
+
+  instance.show();
+
 }
