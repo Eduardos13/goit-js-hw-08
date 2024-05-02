@@ -65,11 +65,11 @@ const images = [
   },
 ];
 
-const container = document.querySelector(".gallery");
+const container = document.querySelector(".gallery");   // отримуємо елемент
 
-container.insertAdjacentHTML("beforeend", createMarkup(images));
+container.insertAdjacentHTML("beforeend", createMarkup(images)); // робимо розмітку
 
-function createMarkup(arr) {
+function createMarkup(arr) { // створюємо розмітку
   return arr.map(item => `
     <li class="gallery-item">
       <a class="gallery-link" href="${item.original}">
@@ -85,11 +85,11 @@ function createMarkup(arr) {
 };
 
 
-container.addEventListener("click", handleClick);
+container.addEventListener("click", handleClick); // навішуємо подію
 
 function handleClick(event) {
 
   event.preventDefault();
 
-  
+  console.log(event.target.dataset.source); // виводимо в консоль посилання на велике зображення
 }
